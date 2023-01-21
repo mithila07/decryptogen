@@ -1,0 +1,35 @@
+@use "~/src/sass/abstracts" as *;
+
+.cloudSection {
+    padding-block-start: 96px;
+    background-color: $bg-light;
+
+    .wrapper {
+        h1 {
+            color: $text-primary;
+            max-width: 48rem;
+        }
+
+        .subHeading {
+            max-width: 35rem;
+            line-height: 2;
+            @include font-size(1.375rem);
+            color: $text-black;
+        }
+
+        .descriptionText {
+            color: $text-black;
+            max-width: 80%;
+            line-height: 1.5
+        }
+
+        .btnGroup {
+            gap: 1rem;
+            flex-direction: column;
+
+            @include respond-above(sm) {
+                flex-direction: row;
+            }
+        }
+    }
+}

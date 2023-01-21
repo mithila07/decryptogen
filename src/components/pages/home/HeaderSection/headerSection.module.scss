@@ -1,0 +1,26 @@
+@use "~/src/sass/abstracts" as *;
+
+.headerSection {
+  background: url(../../../../assets/img/header-abstaract-lines-bg.svg)
+    no-repeat center;
+  background-size: 100% auto;
+  margin-block-start: -76px;
+  padding-block: 76px 100px;
+}
+
+.wrapper {
+  p {
+    max-width: 35rem;
+    line-height: 2;
+    @include font-size(1.375rem);
+  }
+}
+
+.btnGroup {
+  gap: 1rem;
+  flex-direction: column;
+
+  @include respond-above(sm) {
+    flex-direction: row;
+  }
+}

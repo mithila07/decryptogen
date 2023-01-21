@@ -1,0 +1,114 @@
+@use "~/src/sass/abstracts" as *;
+
+.securitySection {
+  padding-block: 96px;
+  background-color: $bg-dark;
+  background: url(../../../../assets/img/abstract-lines-bg-2.svg) no-repeat
+    center;
+  background-size: 100% auto;
+
+  .wrapper {
+    h1 {
+      color: $text-primary;
+      max-width: 48rem;
+    }
+
+    .subHeading {
+      max-width: 40rem;
+      line-height: 2;
+      @include font-size(1.375rem);
+      color: $text-white;
+    }
+  }
+}
+
+.securityItemsWrapper {
+  margin-top: 5rem;
+
+  .securityItem {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding-bottom: 2.5rem;
+    gap: 1.5rem;
+
+    @include respond-above(md) {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    &::after {
+      @include respond-above(md) {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: $orange-500;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 0;
+        z-index: 0;
+      }
+    }
+
+    &Icon {
+      background-color: $orange-600;
+      display: grid;
+      place-content: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      z-index: 2;
+      flex-shrink: 0;
+    }
+
+    &Description {
+      flex-grow: 1;
+      text-align: left;
+
+      @include respond-above(md) {
+        position: absolute;
+        width: calc(50% - 70px);
+        left: 0;
+        text-align: right;
+        top: 25%;
+      }
+
+      p {
+        color: $orange-200;
+        line-height: 1.4rem;
+      }
+
+      h5 {
+        margin-bottom: 0.5rem;
+        color: $text-primary;
+      }
+    }
+
+    &:first-child {
+      &::before {
+        @include respond-above(md) {
+          position: absolute;
+          content: "";
+          bottom: 100%;
+          transform: translateX(-50%);
+          left: 50%;
+          width: 1px;
+          height: 2.5rem;
+          background-color: $orange-500;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      .securityItemDescription {
+        @include respond-above(md) {
+          right: 0;
+          text-align: left;
+          left: unset;
+        }
+      }
+    }
+  }
+}

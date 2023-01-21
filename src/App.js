@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { HeaderNavigation } from './components/common/HeaderNavigation';
+import { AboutUsSection } from './components/pages/home/AboutUsSction';
+import { CloudServiceSection } from './components/pages/home/CloudServicesSection';
+import { ContactUsSection } from './components/pages/home/ContactUsSection';
+import { HeaderSection } from './components/pages/home/HeaderSection';
+import { MoreSolutionSection } from './components/pages/home/MoreServicesSection';
+import { SecuritySolutionSection } from './components/pages/home/SecuritySolutionSection';
+import { SoftwareServicesSection } from './components/pages/home/SoftwareServicesSection';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeaderNavigation />
+      <HeaderSection />
+      <CloudServiceSection />
+      <SoftwareServicesSection />
+      <SecuritySolutionSection />
+      <MoreSolutionSection />
+      <AboutUsSection />
+      <ContactUsSection />
     </div>
   );
 }

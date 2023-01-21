@@ -1,0 +1,32 @@
+@use "~/src/sass/abstracts"as *;
+
+.contactUsSection {
+    padding-block: 96px;
+    background-color: $bg-light;
+
+    .titleWrapper {
+        h5 {
+            color: $text-black;
+        }
+
+        h2 {
+            color: $text-primary;
+            font-weight: 600;
+        }
+
+        p {
+            color: $text-black;
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+
+        .btnGroup {
+            gap: 1rem;
+            flex-direction: column;
+
+            @include respond-above(sm) {
+                flex-direction: row;
+            }
+        }
+    }
+}

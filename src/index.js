@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "@fontsource/fira-code";
+import "@fontsource/fira-sans/300.css";
+import '../src/sass/styles.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

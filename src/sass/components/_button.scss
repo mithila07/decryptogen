@@ -1,0 +1,37 @@
+@use "~/src/sass/abstracts/variables" as *;
+
+.dg-btn {
+    border-radius: 100px !important;
+    font-family: "Fira Code", monospace;
+    font-weight: 500;
+    padding: 15px 30px;
+    background-color: $orange-300;
+    border: 1px solid $orange-300;
+    color: $text-black !important;
+    transition: 0.35s ease-in-out all;
+
+    &:hover {
+        background-color: $orange-400;
+        border-color: $orange-400;
+    }
+
+    &.outlined {
+        background-color: transparent;
+
+        &:hover {
+            background-color: $bg-dark;
+            border-color: $dark-200;
+            color: $text-white !important;
+        }
+
+        &.light {
+            color: $text-white !important;
+
+            &:hover {
+                background-color: $bg-light;
+                border-color: $light-100;
+                color: $text-black !important;
+            }
+        }
+    }
+}

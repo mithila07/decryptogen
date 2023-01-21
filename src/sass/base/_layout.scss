@@ -1,0 +1,5 @@
+@use '../abstracts/mixins' as *;
+
+.dg-container {
+    @include make-container(4rem);
+}

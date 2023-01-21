@@ -1,0 +1,36 @@
+@import "~/node_modules/bootstrap/scss/mixins";
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$breakpoint: map-get($breakpoints, xs);
+
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin make-container($padding-x: $container-padding-x) {
+  max-width: 1140px;
+  padding-inline: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include respond-above(sm) {
+    padding-inline: $padding-x;
+  }
+}

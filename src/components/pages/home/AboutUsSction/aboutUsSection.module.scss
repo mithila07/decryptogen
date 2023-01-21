@@ -1,0 +1,121 @@
+@use "~/src/sass/abstracts"as *;
+
+.marginTop10 {
+  margin-block-start: 5rem;
+
+  @include respond-above(md) {
+    .marginTop10 {
+      margin-block-start: 10rem;
+    }
+  }
+}
+
+.aboutUsSection {
+  padding-block: 96px;
+
+  .titleWrapper {
+    border-color: $orange-200 !important;
+
+    &:last-child {
+      margin-top: 8rem;
+    }
+
+    h2 {
+      color: $text-primary;
+      font-weight: 600;
+    }
+
+    .subHeading {
+      max-width: 40rem;
+      line-height: 2;
+      @include font-size(1.375rem);
+      color: $text-white;
+    }
+  }
+
+  .imageBlock {
+    padding-block-start: 2rem;
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin-block-start: 4rem;
+
+      @include respond-above(md) {
+        margin-block-start: 0;
+        padding-inline-start: 5rem;
+      }
+    }
+
+    button {
+      @include respond-above(md) {
+        margin-inline-start: 5rem;
+      }
+    }
+
+    &Wrapper {
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        width: 180px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+
+        @include respond-above(sm) {
+          width: 280px;
+        }
+      }
+
+      &::before {
+        background-color: $orange-600;
+        left: 0;
+        z-index: 2;
+      }
+
+      &::after {
+        border: 1px solid $orange-100;
+        left: 80px;
+        z-index: -1;
+
+        @include respond-above(sm) {
+          left: 100px;
+        }
+      }
+
+      img {
+        width: 180px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: center;
+        mix-blend-mode: overlay;
+        top: 26px;
+        left: 32px;
+        position: relative;
+        z-index: 4;
+
+        @include respond-above(sm) {
+          width: 280px;
+        }
+      }
+
+      .imgOverlay {
+        position: absolute;
+        width: 180px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        z-index: 3;
+        background-color: #603628;
+        left: 32px;
+        top: 26px;
+
+        @include respond-above(sm) {
+          width: 280px;
+        }
+      }
+    }
+  }
+}

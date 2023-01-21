@@ -1,0 +1,29 @@
+@use "~/src/sass/abstracts" as *;
+
+.solutionSection {
+  padding-block: 96px;
+  background-color: $bg-light;
+
+  .wrapper {
+    h4 {
+      color: $text-black;
+      line-height: 1.5;
+    }
+
+    .subHeading {
+      max-width: 40rem;
+      line-height: 2;
+      @include font-size(1.375rem);
+      color: $text-white;
+    }
+  }
+}
+
+.btnGroup {
+  gap: 1rem;
+  flex-direction: column;
+
+  @include respond-above(sm) {
+    flex-direction: row;
+  }
+}

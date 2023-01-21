@@ -1,0 +1,94 @@
+@use "~/src/sass/abstracts" as *;
+
+.cloudSection {
+  padding-block: 96px;
+  background-color: $bg-light;
+
+  .wrapper {
+    h1 {
+      color: $text-primary;
+      max-width: 48rem;
+    }
+
+    .subHeading {
+      max-width: 35rem;
+      line-height: 2;
+      @include font-size(1.375rem);
+      color: $text-black;
+    }
+
+    .descriptionText {
+      color: $text-black;
+      max-width: 80%;
+      line-height: 1.5;
+    }
+
+    .btnGroup {
+      gap: 1rem;
+      flex-direction: column;
+
+      @include respond-above(sm) {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+.card {
+  border: 0;
+
+  @include respond-above(md) {
+    max-width: 90%;
+  }
+
+  &Header {
+    background-color: transparent;
+    position: relative;
+    border: 0;
+    padding: 0;
+    height: 80px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 80px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: $orange-100;
+      left: 0;
+    }
+  }
+
+  &Img {
+    width: 64px;
+    aspect-ratio: 1;
+    z-index: 2;
+    margin-inline-start: 40px;
+  }
+
+  &Body {
+    text-align: left;
+    padding: 2rem 0 0;
+  }
+
+  &Title {
+    color: $text-primary;
+    font-family: "Fira Code", monospace;
+    font-weight: 600;
+  }
+
+  &Text {
+    color: $text-black;
+    line-height: 1.5;
+    margin-block-start: 1.5rem;
+  }
+}
+
+.centerBorder {
+  @include respond-above(md) {
+    border-right: 1px solid #b1b1b1;
+  }
+}

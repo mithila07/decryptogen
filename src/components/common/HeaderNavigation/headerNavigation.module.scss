@@ -1,0 +1,57 @@
+@use "~/src/sass/abstracts"as *;
+
+.toggleBtn {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.navbarItems {
+    gap: 48px;
+    align-items: center;
+    background-color: #15110F;
+    padding: 2rem;
+    margin-block-start: 1rem;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    @include respond-above(md) {
+        background-color: transparent;
+        margin-block-start: 0;
+        padding: 0;
+        position: relative;
+        left: auto;
+        width: auto;
+    }
+
+    a {
+        color: $text-white;
+        font-weight: 400;
+
+        &:hover,
+        &:active,
+        &.active {
+            color: $text-primary;
+        }
+    }
+}
+
+.contactBtn {
+    a {
+        border-radius: 100px;
+        border: 1px solid $light-100;
+        color: $text-white;
+        font-family: "Fira Code", monospace;
+        font-weight: 500;
+        padding: 12px 24px !important;
+
+        &:hover,
+        &:active,
+        &.active {
+            background-color: $bg-light;
+            color: $text-black;
+        }
+    }
+}
