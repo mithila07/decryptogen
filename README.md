@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Decryptogen
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Landing page for start up tech company based in Sri Lanka
 
 ## Available Scripts
 
