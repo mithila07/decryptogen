@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/decryptogen/static/css/main.6ecdee3c.css",
-    "main.js": "/decryptogen/static/js/main.8e961386.js",
+    "main.js": "/decryptogen/static/js/main.59aebab6.js",
     "static/js/787.44bd70ab.chunk.js": "/decryptogen/static/js/787.44bd70ab.chunk.js",
     "static/media/cloud-services-illustration.svg": "/decryptogen/static/media/cloud-services-illustration.3e17d2e15a33ba07ba555a123acef8d4.svg",
     "static/media/fira-sans-all-400-normal.woff": "/decryptogen/static/media/fira-sans-all-400-normal.a53186151b57dec16d41.woff",
@@ -57,11 +57,11 @@
     "static/media/developer-mode.svg": "/decryptogen/static/media/developer-mode.eb4a0b562babe14d261a51311181e073.svg",
     "index.html": "/decryptogen/index.html",
     "main.6ecdee3c.css.map": "/decryptogen/static/css/main.6ecdee3c.css.map",
-    "main.8e961386.js.map": "/decryptogen/static/js/main.8e961386.js.map",
+    "main.59aebab6.js.map": "/decryptogen/static/js/main.59aebab6.js.map",
     "787.44bd70ab.chunk.js.map": "/decryptogen/static/js/787.44bd70ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ecdee3c.css",
-    "static/js/main.8e961386.js"
+    "static/js/main.59aebab6.js"
   ]
 }
